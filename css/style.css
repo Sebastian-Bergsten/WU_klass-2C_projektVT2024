@@ -1,0 +1,126 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+header {
+    background-color: red;
+    grid-area: header;
+}
+
+nav {
+    background-color: greenyellow;
+    grid-area: nav;
+}
+
+#mainmenu_grid_wrapper {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 400px 1fr;
+    grid-template-rows: 80px 1fr 1fr;
+    grid-template-areas: 
+    "header nav"
+    "art_1 art_1"
+    "art_2 art_2"
+    ;
+}
+
+#article_1 {
+    background-color: lightblue;
+    grid-area: art_1;
+}
+
+#article_2 {
+    background-color: lightgrey;
+    grid-area: art_2;
+}
+
+/*
+#chat {
+    background-color: green;
+    grid-area: chat;
+}
+*/
+
+#tjänster_grid_wrapper {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 400px 1fr 400px;
+    grid-template-rows: 80px 1fr;
+    grid-template-areas: 
+    "header nav nav"
+    "des_1 art_3 des_2"
+    ;
+}
+
+#article_3 {
+    background-color: purple;
+    grid-area: art_3;
+}
+
+#design_1 {
+    background-color: aqua;
+    grid-area: des_1;
+}
+
+#design_2 {
+    background-color: aqua;
+    grid-area: des_2;
+}
+
+#referenser_grid_wrapper {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 300px 100px 1fr 300px;
+    grid-template-rows: 80px 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "header header nav nav"
+    "sec_1 sec_2 sec_2 sec_2"
+    "sec_1 sec_2 sec_2 sec_2"
+    "sec_3 sec_3 sec_3 sec_4"
+    "sec_3 sec_3 sec_3 sec_4"
+    ;
+}
+
+#section_1 {
+    background-color: burlywood;
+    grid-area: sec_1;
+}
+
+#section_2 {
+    background-color: orange;
+    grid-area: sec_2;
+}
+
+#section_3 {
+    background-color: orange;
+    grid-area: sec_3;
+}
+
+#section_4 {
+    background-color: burlywood;
+    grid-area: sec_4;
+}
+
+#om_oss_grid_wrapper {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 400px 1fr;
+    grid-template-rows: 80px 1fr 200px;
+    grid-template-areas: 
+    "header nav"
+    "video video"
+    "footer footer"
+    ;
+}
+
+#video {
+    background-color: blueviolet;
+    grid-area: video;
+}
+
+footer {
+    background-color: grey;
+    grid-area: footer;
+}
