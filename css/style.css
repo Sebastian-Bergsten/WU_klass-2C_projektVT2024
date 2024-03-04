@@ -9,9 +9,34 @@ header {
     grid-area: header;
 }
 
+#mssocials_logo_header {
+    height: 80px;
+}
+
 nav {
-    background-color: greenyellow;
+    background-color: rgb(224, 224, 224);
+    border: 2px solid black;
     grid-area: nav;
+}
+
+#nav_buttons_list {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+    height: 80px;
+}
+
+.nav_buttons {
+    padding: 30px 30px 30px 30px;
+}
+
+.nav_buttons:hover {
+    background-color: white;
+    padding: 30px 30px 30px 30px;
+    border-bottom: 20px solid black;
+    transition: 0.5s;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
 #mainmenu_grid_wrapper {
@@ -22,8 +47,7 @@ nav {
     grid-template-areas: 
     "header nav"
     "art_1 art_1"
-    "art_2 art_2"
-    ;
+    "art_2 art_2";
 }
 
 #article_1 {
