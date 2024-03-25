@@ -5,18 +5,28 @@
 }
 
 header {
-    background-color: red;
     grid-area: header;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
 }
 
 #mssocials_logo_header {
     height: 80px;
 }
 
+a {
+    color: black;
+    text-decoration: none;
+}
+
 nav {
     background-color: rgb(224, 224, 224);
     border: 2px solid black;
     grid-area: nav;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
 }
 
 #nav_buttons_list {
@@ -34,12 +44,14 @@ nav {
 .nav_buttons:hover {
     background-color: white;
     padding: 30px 30px 30px 30px;
-    border-bottom: 20px solid black;
-    transition: 0.5s;
+    border-bottom: 5px solid black;
+    height: 75px;
+    transition: 0.2s;
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
 #mainmenu_grid_wrapper {
+    background-color: beige;
     display: grid;
     height: 100vh;
     grid-template-columns: 400px 1fr;
@@ -51,13 +63,24 @@ nav {
 }
 
 #article_1 {
-    background-color: lightblue;
     grid-area: art_1;
+    margin: 60px;
+    padding: 20px;
+    border: 5px outset rgb(255, 212, 132);
+
 }
 
 #article_2 {
-    background-color: lightgrey;
+    width: 100%;
     grid-area: art_2;
+}
+
+.presentation_slides {
+    width: 100%;
+}
+
+#first_slide {
+    border-radius: 50px 50px 0px 0px;
 }
 
 /*
@@ -68,6 +91,7 @@ nav {
 */
 
 #tjänster_grid_wrapper {
+    background-color: beige;
     display: grid;
     height: 100vh;
     grid-template-columns: 400px 1fr 400px;
@@ -79,17 +103,21 @@ nav {
 }
 
 #article_3 {
-    background-color: purple;
+    background-color:rgb(255, 212, 132) ;
     grid-area: art_3;
+    display: flex;
+    justify-content: center;
+}
+
+#tjänster_lista {
+    
 }
 
 #design_1 {
-    background-color: aqua;
     grid-area: des_1;
 }
 
 #design_2 {
-    background-color: aqua;
     grid-area: des_2;
 }
 
@@ -105,6 +133,12 @@ nav {
     "sec_3 sec_3 sec_3 sec_4"
     "sec_3 sec_3 sec_3 sec_4"
     ;
+}
+
+.referenser_sections {
+    margin: 20px;
+    border-radius: 15px;
+    border: 5px inset rgb(255, 212, 132);
 }
 
 #section_1 {
@@ -140,7 +174,7 @@ nav {
 }
 
 #video {
-    background-color: blueviolet;
+    background-color: rgb(255, 212, 132);
     grid-area: video;
 }
 
