@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Dosis:wght@500&family=Inter:wght@300&display=swap');
+
 * {
     box-sizing: border-box;
     margin: 0px;
@@ -6,13 +8,16 @@
 
 header {
     grid-area: header;
-    position: -webkit-sticky; /* Safari */
+    position: -webkit-sticky;
     position: sticky;
     top: 0;
+    z-index: 1;
 }
 
 #mssocials_logo_header {
+    width: 400px;
     height: 80px;
+    border-bottom: 2px solid black;
 }
 
 a {
@@ -24,9 +29,10 @@ nav {
     background-color: rgb(224, 224, 224);
     border: 2px solid black;
     grid-area: nav;
-    position: -webkit-sticky; /* Safari */
+    position: -webkit-sticky;
     position: sticky;
     top: 0;
+    z-index: 1;
 }
 
 #nav_buttons_list {
@@ -39,6 +45,7 @@ nav {
 
 .nav_buttons {
     padding: 30px 30px 30px 30px;
+    font-family: "DM Sans", sans-serif;
 }
 
 .nav_buttons:hover {
@@ -50,7 +57,7 @@ nav {
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
-#mainmenu_grid_wrapper {
+#home_grid_wrapper {
     background-color: beige;
     display: grid;
     height: 100vh;
@@ -63,11 +70,18 @@ nav {
 }
 
 #article_1 {
+    display: flex;
+    justify-content: center;
     grid-area: art_1;
+}
+
+#article_1_p {
+    width: 710px;
     margin: 60px;
     padding: 20px;
-    border: 5px outset rgb(255, 212, 132);
-
+    border: 5px outset orange;
+    background-color: rgb(255, 222, 160);
+    font-family: "DM Sans", sans-serif;
 }
 
 #article_2 {
@@ -81,6 +95,7 @@ nav {
 
 #first_slide {
     border-radius: 50px 50px 0px 0px;
+    border-top: 5px solid orange;
 }
 
 /*
@@ -90,82 +105,191 @@ nav {
 }
 */
 
-#tjänster_grid_wrapper {
-    background-color: beige;
+#services_grid_wrapper {
     display: grid;
-    height: 100vh;
-    grid-template-columns: 400px 1fr 400px;
-    grid-template-rows: 80px 1fr;
-    grid-template-areas: 
-    "header nav nav"
-    "des_1 art_3 des_2"
+    grid-template-columns: 400px 1fr;
+    grid-template-rows: 80px 150px 1fr;
+    grid-template-areas:
+    "header nav"
+    "art3 art3"
+    "plat plat"
     ;
 }
 
 #article_3 {
-    background-color:rgb(255, 212, 132) ;
-    grid-area: art_3;
+    grid-area: art3;
+    background-color: rgb(50, 50, 50);
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
-#tjänster_lista {
-    
+#article_3_p {
+    color: rgb(224, 224, 224);
+    text-align: center;
+    background-color: rgb(40, 40, 40);
+    width: 700px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid black;
+    font-family: "DM Sans", sans-serif;
 }
 
-#design_1 {
-    grid-area: des_1;
-}
-
-#design_2 {
-    grid-area: des_2;
-}
-
-#referenser_grid_wrapper {
+#platforms_grid_wrapper {
+    background-color: rgb(50, 50, 50)  ;
     display: grid;
     height: 100vh;
-    grid-template-columns: 300px 100px 1fr 300px;
-    grid-template-rows: 80px 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     grid-template-areas: 
-    "header header nav nav"
-    "sec_1 sec_2 sec_2 sec_2"
-    "sec_1 sec_2 sec_2 sec_2"
-    "sec_3 sec_3 sec_3 sec_4"
-    "sec_3 sec_3 sec_3 sec_4"
+    "plat1 plat1 plat2 plat2 plat3 plat3"
+    ". plat4 plat4 plat5 plat5 ."
     ;
+    grid-area: plat;
 }
 
-.referenser_sections {
-    margin: 20px;
+.list_titles {
+    color: rgb(224, 224, 224);
+    font-weight: bold;
+    font-size: larger;
+    letter-spacing: 0.5px;
+    border-left: 2px solid orange;
+    border-bottom: 2px solid orange;
+    padding: 5px;
+    width: 350px;
+    height: 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    font-family: "DM Sans", sans-serif;
+}
+
+.list_img {
+    height: 50px;
     border-radius: 15px;
-    border: 5px inset rgb(255, 212, 132);
+    border: 2px solid orange;
+    position: relative;
+    top: 7px;
+}
+
+.list_p {
+    color: rgb(224, 224, 224);
+    letter-spacing: 0.5px;
+    line-height: 20px;
+    border-left: 2px solid orange;
+    width: 350px;
+    padding: 5px;
+    font-family: "DM Sans", sans-serif;
+}
+
+.platform_list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#Facebook {
+    grid-area: plat1;
+    padding-left: 10px;
+    margin-top: 20px;
+    height: min-content;
+}
+
+#Instagram {
+    grid-area: plat2;
+    margin-top: 20px;
+    height: min-content;
+}
+
+#Google {
+    grid-area: plat3;
+    padding-right: 10px;
+    margin-top: 20px;
+    height: min-content;
+}
+
+#Youtube {
+    grid-area: plat4;
+}
+
+#Twitter {
+    grid-area: plat5;   
+}
+
+#portfolio_grid_wrapper {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 400px 400px 1fr;
+    grid-template-rows: 80px 1fr;
+    grid-template-areas:
+    "header nav nav"
+    "art4 art4 sec1"
+    ;
+    background-image: url('/img/Portfolio_background.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+#article_4 {
+    grid-area: art4;
+    margin: 80px;
+    background-color: rgb(50, 50, 50);
+    height: min-content;
+    border-radius: 30px;
+    border: 5px solid rgb(40, 40, 40);
+    opacity: 0.9;
+}
+
+.article_4_p {
+    color: white;
+    margin: 30px;
+    letter-spacing: 0.3px;
+    line-height: 20px;
+    opacity: 1;
+    font-family: "DM Sans", sans-serif;
 }
 
 #section_1 {
-    background-color: burlywood;
-    grid-area: sec_1;
+    grid-area: sec1;
+    margin: 40px 100px 20px 100px;
+    background-color: rgb(50, 50, 50);
+    display: flex;
+    justify-content: center;
+    border-radius: 30px;
+    border: 5px solid rgb(40, 40, 40);
+    opacity: 0.9;
 }
 
-#section_2 {
-    background-color: orange;
-    grid-area: sec_2;
+.portfolio_names {
+    color: white;
+    padding-top: 25px;
+    font-weight: bold;
+    font-size: larger;
+    letter-spacing: 0.3px;
+    opacity: 1;
+    font-family: "DM Sans", sans-serif;
 }
 
-#section_3 {
-    background-color: orange;
-    grid-area: sec_3;
+.portfolio_links {
+    list-style: none;
+    text-indent: 30px;
+    color: white;
+    letter-spacing: 0.3px;
+    text-decoration: underline;
+    opacity: 1;
+    font-family: "DM Sans", sans-serif;
 }
 
-#section_4 {
-    background-color: burlywood;
-    grid-area: sec_4;
+.portfolio_links:hover {
+    color: rgb(255, 222, 160);
 }
 
-#om_oss_grid_wrapper {
+#contact_grid_wrapper {
     display: grid;
     height: 100vh;
     grid-template-columns: 400px 1fr;
-    grid-template-rows: 80px 1fr 200px;
+    grid-template-rows: 80px 1fr 230px;
     grid-template-areas: 
     "header nav"
     "video video"
@@ -173,12 +297,92 @@ nav {
     ;
 }
 
-#video {
-    background-color: rgb(255, 212, 132);
+#article_5 {
+    background-color: rgb(255, 222, 160);
     grid-area: video;
+    display: flex;
+    justify-content: center;
 }
 
+#video {
+    height: 400px;
+    margin: 20px;
+    border-radius: 30px;
+    border: 5px solid orange;
+}
+
+#playbutton {
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Det är inte faktiskt en video eftersom jag inte vill dela den på den här hemsidan än, det är en så länge bara en bild på videon */
+
 footer {
-    background-color: grey;
     grid-area: footer;
+    background-color: rgb(50, 50, 50);
+    display: flex;
+    justify-content: space-around;
+    border-top: 5px solid rgb(40, 40, 40);
+}
+
+.footer_lists {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    color: rgb(224, 224, 224);
+    align-items: center;
+    list-style: none;
+    padding-top: 10px;
+    font-family: "DM Sans", sans-serif;
+}
+
+.footer_title {
+    list-style: none;
+    font-weight: bold;
+}
+
+#footer_nav {
+    list-style: none;
+    text-decoration: underline;
+}
+
+#footer_contact {
+    align-items: flex-start;
+    list-style: circle;
+}
+
+#footer_socials {
+    justify-content: flex-start;
+}
+
+#footer_img_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    width: 150px;
+    padding-top: 15px;
+}
+
+.a_footer {
+    color: rgb(224, 224, 224);
+}
+
+.footer_img {
+    height: 50px;
+    margin: 5px;
+}
+
+@media screen and (max-width: 700px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+
+        --burgerline_width: 30px;
+        --burgerline_height: 6px;
+        --burgerline_margin: 5px;
+    }
 }
