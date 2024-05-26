@@ -1,9 +1,9 @@
 const burger = document.getElementById('burger')
-const linkList = document.getElementById('link_list')
+const nav = document.getElementById('nav_buttons_list')
 
 function toggleMenu() {
-    linkList.classList.toggle('links_visible')
-    burger.classList.toggle('burger_in_x_form')
+    nav.classList.toggle('nav_active')
+    burger.classList.toggle('crossed_line')
 }
 
 burger.addEventListener('click', toggleMenu)

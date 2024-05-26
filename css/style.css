@@ -15,8 +15,8 @@ header {
 }
 
 #mssocials_logo_header {
-    width: 400px;
-    height: 80px;
+    width: 100%;
+    height: 100%;
     border-bottom: 2px solid black;
 }
 
@@ -136,7 +136,7 @@ nav {
 }
 
 #platforms_grid_wrapper {
-    background-color: rgb(50, 50, 50)  ;
+    background-color: rgb(50, 50, 50);
     display: grid;
     height: 100vh;
     grid-gap: 10px;
@@ -226,7 +226,7 @@ nav {
     "header nav nav"
     "art4 art4 sec1"
     ;
-    background-image: url('/img/Portfolio_background.jpg');
+    background-image: url('../img/Portfolio_background.jpg');
     background-size: cover;
     background-position: center;
 }
@@ -252,7 +252,7 @@ nav {
 
 #section_1 {
     grid-area: sec1;
-    margin: 40px 100px 20px 100px;
+    margin: 40px 100px 80px 100px;
     background-color: rgb(50, 50, 50);
     display: flex;
     justify-content: center;
@@ -289,7 +289,7 @@ nav {
     display: grid;
     height: 100vh;
     grid-template-columns: 400px 1fr;
-    grid-template-rows: 80px 1fr 230px;
+    grid-template-rows: 80px 1fr;
     grid-template-areas: 
     "header nav"
     "video video"
@@ -300,23 +300,26 @@ nav {
 #article_5 {
     background-color: rgb(255, 222, 160);
     grid-area: video;
+    position: relative;
     display: flex;
     justify-content: center;
 }
 
 #video {
     height: 400px;
+    width: auto;
     margin: 20px;
     border-radius: 30px;
     border: 5px solid orange;
+    
 }
 
 #playbutton {
     height: 50px;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    bottom: 50%;
+    right: 50%;
+    transform: translate(50%, 50%);
 }
 
 /* Det är inte faktiskt en video eftersom jag inte vill dela den på den här hemsidan än, det är en så länge bara en bild på videon */
@@ -376,13 +379,206 @@ footer {
 }
 
 @media screen and (max-width: 700px) {
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
 
+    * {
         --burgerline_width: 30px;
-        --burgerline_height: 6px;
-        --burgerline_margin: 5px;
+        --burgerline_height: 5px;
+        --burgerline_margin: 6px;
+    }
+
+    #article_1_p {
+        margin: 50px;
+        padding: 15px;
+    }
+
+    #home_grid_wrapper {
+        grid-template-columns: 300px 1fr;
+        grid-template-rows: 60px 1fr 1fr;
+        grid-template-areas: 
+        "header nav"
+        "art_1 art_1"
+        "art_2 art_2";
+    }
+
+    header {
+        position: relative;
+    }
+
+    nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+    #nav_buttons_list {
+        flex-direction: column;
+        justify-content: space-around;
+        height: 300px;
+        width: 90px;
+        position: absolute;
+        top: -500px;
+        background-color: rgb(224, 224, 224);
+        border: 2px solid black;
+        transition: all 0.5s;
+    }
+
+    .nav_buttons {
+        padding: 0px;
+        font-size: 0.8rem;
+    }
+
+    .nav_buttons:hover {
+        background-color:rgb(224, 224, 224);;
+        padding: 0px;
+        border-bottom: none;
+        height: 21px;
+        transition: 0s;
+        box-shadow: none;
+        text-decoration: underline;
+    }
+
+    .burger_line {
+        width: var(--burgerline_width);
+        height: var(--burgerline_height);
+        margin: var(--burgerline_margin);
+        background-color: black;
+        transition: all 0.5s;
+    }
+
+    .crossed_line #line_2 {
+        opacity: 0;
+    }
+    
+    .crossed_line #line_1 {
+        transform: translateY(calc(var(--burgerline_height) + var(--burgerline_margin))) rotate(45deg);
+    }
+    
+    .crossed_line #line_3 {
+        transform: translateY(calc((-1)*(var(--burgerline_height) + var(--burgerline_margin)))) rotate(-45deg);
+    }
+
+    .nav_active {
+        transform: translateY(562px);
+    }
+
+    #services_grid_wrapper {
+        grid-template-columns: 300px 1fr;
+        grid-template-rows: 60px 150px 1fr;
+        grid-template-areas:
+        "header nav"
+        "art3 art3"
+        "plat plat"
+        ;
+    }
+
+    #article_3 {
+        padding-top: 20px;
+    }
+
+    #article_3_p {
+        margin: 5px;
+        padding: 4px;
+    }
+
+    #platforms_grid_wrapper {
+        height: 100%;
+        grid-gap: 0px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        "plat1"
+        "plat2"
+        "plat3"
+        "plat4"
+        "plat5";
+    }
+
+    #Facebook {
+        padding-left: 0px;
+        margin-top: 30px;
+    }
+    
+    #Instagram {
+        margin-top: 10px;
+    }
+    
+    #Google {
+        padding-right: 0px;
+        margin-top: 0px;
+    }
+    
+    #Twitter {
+        padding-bottom: 20px;
+    }
+
+    #portfolio_grid_wrapper {
+        grid-template-columns: 300px 1fr;
+        grid-template-rows: 60px 1fr 1fr;
+        grid-template-areas:
+        "header nav"
+        "art4 art4"
+        "sec1 sec1"
+        ;
+        background-size: 300vh;
+    }
+
+    #article_4 {
+        margin: 40px;
+    }
+
+    .article_4_p {
+        margin: 20px;
+    }
+
+    #section_1 {
+        margin: 0px 70px 0px 70px;
+        height: auto;
+        padding: 0px 0px 20px 20px;
+    }
+
+    .portfolio_names {
+        padding-top: 20px;
+    }
+
+    #contact_grid_wrapper {
+        grid-template-columns: 300px 1fr;
+        grid-template-rows: 60px 1fr;
+    }
+
+    footer {
+        height: 400px;
+    }
+
+    #video {
+        height: 240px;        
+    }
+
+    #footer_nav {
+        display: none;
+    }
+
+    #footer_contact {
+        margin: 0px 0px 5px 100px;
+    }
+
+    #footer_socials {
+        position: relative;
+        right: 100px;
+    }
+
+    .footer_title {
+        width: 150px;
+    }
+
+    #footer_img_wrapper {
+        width: 170px;
+        padding-top: 0px;
+        margin-right: 0px;
+    }
+
+    .footer_img {
+        margin: 0px;
+        margin-top: 15px;
     }
 }
